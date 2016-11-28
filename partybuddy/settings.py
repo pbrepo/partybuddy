@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Find out where are we running from
+SITE_ROOT = os.path.normpath(
+                    os.path.join(
+                        os.path.dirname(os.path.realpath(__file__)
+                    ), '..'))
 
 # Application definition
 
@@ -37,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'webapp'
 ]
 
 MIDDLEWARE = [
@@ -47,10 +53,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
-
-ALLOWED_HOSTS = [
-    '*',
 ]
 
 ROOT_URLCONF = 'partybuddy.urls'
@@ -84,6 +86,9 @@ DATABASES = {
     }
 }
 
+ALLOWED_HOSTS = [
+    '*',
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -122,3 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+TEMPLATE_DIRS = (
+    os.path.join(SITE_ROOT, "webapp", "templates"),
+)
