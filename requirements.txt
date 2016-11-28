@@ -1,15 +1,15 @@
-configparser (3.5.0)
-Django (1.10)
-functools32 (3.2.3.post2)
-gunicorn (19.6.0)
-ipykernel (4.5.0)
-ipython (5.1.0)
-ipython-genutils (0.1.0)
-ipywidgets (5.2.2)
-Jinja2 (2.8)
-jsonschema (2.5.1)
-notebook (4.2.3)
-psycopg2 (2.6.2)
-pytz (2016.7)
-pyzmq (15.4.0)
-setuptools (26.1.1)
+configparser==3.5.0
+Django==1.10
+functools32==3.2.3.post2
+gunicorn==19.6.0
+ipykernel==4.5.0
+ipython==5.1.0
+ipython-genutils==0.1.0
+ipywidgets==5.2.2
+Jinja2==2.8
+jsonschema==2.5.1
+notebook==4.2.3
+psycopg2==2.6.2
+pytz==2016.7
+pyzmq==15.4.0
+setuptools==26.1.1
