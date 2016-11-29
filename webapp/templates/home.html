@@ -5,20 +5,20 @@
 
     <!-- Adding Boostrap CDN -->
     <!-- Latest compiled and minified CSS -->
-<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-
+<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ -->
     <!-- Optional theme -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
 
     <!-- Latest compiled and minified JavaScript -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+   <!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 
 
     <!-- Adding Jquery CDN -->
-   <!--  <script
+    <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"></script> -->
+      crossorigin="anonymous"></script>
 
     <!-- Adding Libraries Locally -->
     <!-- <link rel="stylesheet" href="/static/css/bootstrap.min.css">
@@ -26,66 +26,88 @@
     <script type="text/javascript" charset="utf-8" language="javascript" src="/static/js/jquery.min.js"></script> -->
 
     <!-- Adding our Custom CSS, JS and Fonts -->
+    <script type="text/javascript" charset="utf-8" language="javascript" src="/static/js/vue.js"></script>
     <link rel="stylesheet" href="/static/css/home.css">
     <script type="text/javascript" language="javascript" src="/static/js/home.js"></script>
 
   </head>
-  <body>
+  <body id="app">
 
-    <nav class="navbar navbar-default">
+    <nav id="nav-id" class="navbar navbar-inverse">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-          </button>
           <img class="brang-img" alt="Brand" src="/static/images/partymasti.png">
-          <!-- <a class="navbar-brand" href="#">Party Masti</a> -->
+          <!-- <img class="brang-img" alt="Brand" src="/static/images/favicon.ico"> -->
+          <a class="navbar-brand" href="#">Party Masti</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-          <form class="navbar-form navbar-left">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">SignUp</a></li>
+            <li><a class="fa fa-sign-in" href="#"> Signup </a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div class="container app-container">
-    	<h1> Welcome to party masti.....</h1>
-    </div>
+    <div id="main-container" class="container app-container">
+    	<home v-if="activeApp == 'Home'"></home>    	
+   	</div>
 
-	<nav class="nav-foo navbar navbar-inverse">
+	<nav class="nav-footer nav-foo navbar navbar-inverse">
 	    <div class="container-fluid">
 	      <!-- Brand and toggle get grouped for better mobile display -->
 	      <div class="navbar-footer">
-	        <a class="navbar-brand fa fa-building-o fa-2x" href="#">
+	        <a class="navbar-brand" href="#">
 	        All Rights 2016 @PartyMasti
 			</a>
 	      </div>
 
-	      <!-- Collect the nav links, forms, and other content for toggling -->
 	      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	        <ul class="nav navbar-nav navbar-right">
-	        	<li><a href="www.google.com" class="fa fa-google"></a></li>
-	        	<li><a href="www.facebook.com" class="fa fa-facebook"></a></li>
-	        	<li><a href="www.twitter.com" class="fa fa-twitter"></a></li>
-	        	<li><a href="www.instagram.com" class="fa fa-instagram"></a></li>
-	        	<li><a href="www.blog.com" class="fa fa-rss"></a></li>
+	        	<li><a href="http://www.google.com" class="fa fa-google"></a></li>
+	        	<li><a href="http://www.facebook.com" class="fa fa-facebook"></a></li>
+	        	<li><a href="http://www.twitter.com" class="fa fa-twitter"></a></li>
+	        	<li><a href="http://www.instagram.com" class="fa fa-instagram"></a></li>
+	        	<li><a href="http://www.blog.com" class="fa fa-rss"></a></li>
 	        </ul>
 	      </div><!-- /.navbar-collapse -->
 	    </div><!-- /.container-fluid -->
     </nav>
 
   </body>
+  <script type="text/javascript" language="javascript" src="/static/js/jquery.min.js"></script>
   <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+  <script src="/static/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="/static/css/font-awesome.min.css">
-  <script type="text/javascript" charset="utf-8" language="javascript" src="/static/js/jquery.min.js"></script>
 </html>
+
+
+
+<script type="text/x-template" id="app-home">
+	<img id="homeimg" src="/static/images/hp.jpg" alt="First slide">
+	<div id="main-form-div">
+		<h1> You're here.. I'm here.. Let's Celebrate each other!</h1>
+		<b> "Checkout near by places to celebrate this special day"</b>
+		<div class="input-group">
+			<div class="dropdown">
+			    <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Vijayawada
+			    <span class="caret"></span></button>
+			    <ul class="dropdown-menu">
+			      <li><a href="#">Guntur</a></li>
+			      <li><a href="#">Warangal</a></li>
+			      <li><a href="#">Hyderabad</a></li>
+			      <li><a href="#">Vizag</a></li>
+			    </ul>
+			  </div>
+    		  <input type="text" class="form-control" id="home-search"
+    		  v-model="recentPropsSearchKey" 
+    		  placeholder="Search for Places by City, Zipcode, or Address....">
+    		  <div class="input-group-btn">
+    		    <button class="btn btn-primary" type="button">
+    		    <i class="fa fa-search"></i> Search</button>
+    		  </div>
+		</div><!-- /input-group -->
+	</div>
+</script>
