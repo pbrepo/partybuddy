@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+
+# Find out where are we running from
 SITE_ROOT = os.path.normpath(
                     os.path.join(
                         os.path.dirname(os.path.realpath(__file__)
@@ -42,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'webapp'
 ]
 
 MIDDLEWARE = [
@@ -85,6 +88,9 @@ DATABASES = {
     }
 }
 
+ALLOWED_HOSTS = [
+    '*',
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
