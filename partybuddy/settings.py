@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITE_ROOT = os.path.normpath(
+                    os.path.join(
+                        os.path.dirname(os.path.realpath(__file__)
+                    ), '..'))
+
 
 # Application definition
 
@@ -54,7 +59,7 @@ ROOT_URLCONF = 'partybuddy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(SITE_ROOT,'webapp/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
