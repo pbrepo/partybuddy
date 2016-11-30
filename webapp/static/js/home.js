@@ -16,9 +16,12 @@ $(document).ready(function () {
 
 		    $.get(url, function( data ) {
 		    	self.details = data['Sheet1'];
-		      	for (var i in self.details){
-		      		console.log(self.details[i]);
-		      	}
+		      	// for (var i in self.details){
+		      	// 	console.log(self.details[i]);
+		      	// 	for(var k in self.details[i]){
+		      	// 		console.log(k);
+		      	// 	}
+		      	// }
 		    });
   	    }
   	});

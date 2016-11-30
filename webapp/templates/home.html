@@ -127,16 +127,18 @@
    	</div>
 
    	<div class="main-container app-container">
-	   	<div class="row">
+	   	<div class="row" id="main-row">
 	   	  <div class="col-sm-6 col-md-4" v-for="item in details">
 	   	    <div class="thumbnail">
 	   	      <img src="/static/images/buddyicon.png" alt="BuddyIcon">
 	   	      <div class="caption">
-	   	      	<div v-for="(k,v) in item">
-	   	      		<span>{{k}}</span>
-	   	      		<span>{{v}}</span>
-		   	    </div>
-		   	    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+	   	      		<span v-text="item.Name"></span><br/>
+	   	      		<span v-text="item.Tags"></span><br/>
+	   	      		<span v-text="item.Type"></span><br/>
+	   	      		<span v-text="item.Branches"></span><br/>
+	   	      		<span v-text="item.Facilities"></span><br/>
+	   	      		<span v-text="item.Giftcards"></span><br/>s
+		   	    <p><a href="#" class="btn btn-primary" role="button">More Details</a> <a href="#" class="btn btn-primary" role="button">Book</a></p>
 	   	      </div>
 	   	    </div>
 	   	  </div>

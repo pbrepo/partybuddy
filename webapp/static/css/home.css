@@ -141,3 +141,7 @@ nav.nav-footer.nav-foo.navbar.navbar-inverse{
     background-color: #fff;
     border-color: #fff;
 }
+
+#main-row.row{
+	margin: 10px 40px;
+}
